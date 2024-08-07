@@ -73,6 +73,7 @@ The **Help Page** offers support features including:
 ---
 
 ## 🎨 Design and Assets
+![Design And Assets](./assets/usage.png)
 
 Libridigm v2.0 offers a visually cohesive design, complete with assets for both light and dark themes.
 
