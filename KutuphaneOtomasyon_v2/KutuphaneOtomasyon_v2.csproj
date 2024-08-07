@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70FC8123-96C2-49CB-BA9F-E1D027BC8964}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KutuphaneOtomasyon_v2</RootNamespace>
+    <AssemblyName>KutuphaneOtomasyon_v2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.UserSecrets, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.3.7\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpPage.Designer.cs">
+      <DependentUpon>HelpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAdmin.Designer.cs">
+      <DependentUpon>ManageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorOnly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeratorOnly.Designer.cs">
+      <DependentUpon>ModeratorOnly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyBooks.Designer.cs">
+      <DependentUpon>MyBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationsPage.Designer.cs">
+      <DependentUpon>NotificationsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpPage.resx">
+      <DependentUpon>HelpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyBooks.resx">
+      <DependentUpon>MyBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationsPage.resx">
+      <DependentUpon>NotificationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-load-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-load-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analiz-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analiz-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anasayfa-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anasayfa-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arama-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arama-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arsiv-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arsiv-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayarlar-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayarlar-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\durum-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\durum-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duzenle-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duzenle-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ekle-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ekle-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gecmis-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gecmis-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guncelle-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guncelle-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaydet-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaydet-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitap-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitap-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitaplar-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitaplar-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kullanici-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kullanici-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kullanicilar-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kullanicilar-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personel-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personel-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sifre-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sifre-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sil-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sil-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uye-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uye-icon-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-flat-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-flat-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-dark-tagline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-light-tagline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-text-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-text-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yardim-icon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yardim-icon-light.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
