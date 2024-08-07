@@ -123,12 +123,26 @@ Libridigm v2.0 is designed to evolve. Planned future updates include:
 
 Here’s a glimpse of what Libridigm v2.0 looks like:
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <img src="./assets/homepage.png" alt="HomePage" style="max-width: 45%; height: auto; margin-bottom: 20px;">
-    <img src="./assets/dashboard.png" alt="Dashboard" style="max-width: 45%; height: auto; margin-bottom: 20px;">
-    <img src="./assets/notifications.png" alt="Notifications" style="max-width: 45%; height: auto; margin-bottom: 20px;">
-    <img src="./assets/help.png" alt="Help Page" style="max-width: 45%; height: auto; margin-bottom: 20px;">
-</div>
+<details>
+  <summary>HomePage</summary>
+  <img src="./assets/homepage.png" alt="HomePage" style="max-width: 100%; height: auto;">
+</details>
+
+<details>
+  <summary>Dashboard</summary>
+  <img src="./assets/dashboard.png" alt="Dashboard" style="max-width: 100%; height: auto;">
+</details>
+
+<details>
+  <summary>Notifications</summary>
+  <img src="./assets/notifications.png" alt="Notifications" style="max-width: 100%; height: auto;">
+</details>
+
+<details>
+  <summary>Help Page</summary>
+  <img src="./assets/help.png" alt="Help Page" style="max-width: 100%; height: auto;">
+</details>
+
 
 ---
 
